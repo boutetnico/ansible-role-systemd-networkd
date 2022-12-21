@@ -28,4 +28,6 @@ systemd_networkd_nsswitch_automount: "files"
 systemd_networkd_nsswitch_aliases: "files"
 systemd_networkd_nsswitch_publickey: "files"
 
+systemd_resolved: {}
+
 # vim: set ts=2 sw=2:
