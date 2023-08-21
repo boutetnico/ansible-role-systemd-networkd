@@ -11,6 +11,12 @@
     enabled: yes
   when: systemd_networkd_network or systemd_networkd_link or systemd_networkd_netdev
 
+- name: ensure systemd-resolved is installed
+  become: true
+  apt:
+    name: systemd-resolved
+  when: systemd_networkd_enable_resolved
+
 - name: start and enable systemd-resolved
   become: true
   service:
